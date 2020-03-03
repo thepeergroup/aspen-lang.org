@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Aspen</title>
+  <!-- <link href="http://feeds.feedburner.com/AspenLang" rel="alternate" title="Aspen's Blog" type="application/atom+xml" /> -->
+  <link rel="stylesheet" type="text/css" href="https://elixir-lang.org/css/style.css" />
+  <link rel="stylesheet" type="text/css" href="https://elixir-lang.org/css/syntax.css" />
+  <link rel="stylesheet" href="https://elixir-lang.org/js/icons/style.css">
+  <!--[if lt IE 8]><!-->
+  <link rel="stylesheet" href="https://elixir-lang.org/js/icons/ie7/ie7.css">
+  <!--<![endif]-->
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" id="font-bitter-css" href="//fonts.googleapis.com/css?family=Bitter:400,700" type="text/css" media="screen" />
+  <link rel="shortcut icon" type="image/x-icon" href="https://elixir-lang.org/favicon.ico" />
+  <!-- Begin Jekyll SEO tag v2.6.1 -->
+  <meta name="generator" content="Jekyll v3.8.5" />
+  <meta property="og:title" content="elixir-lang.github.com" />
+  <meta property="og:locale" content="en_US" />
+  <meta name="description" content="Website for Aspen" />
+  <meta property="og:description" content="Website for Aspen" />
+  <link rel="canonical" href="https://elixir-lang.org/" />
+  <meta property="og:url" content="https://elixir-lang.org/" />
+  <meta property="og:site_name" content="elixir-lang.github.com" />
+  <script type="application/ld+json">
+  {"@type":"WebSite","headline":"elixir-lang.github.com","url":"https://elixir-lang.org/","name":"elixir-lang.github.com","description":"Website for Aspen","@context":"https://schema.org"}</script>
+  <!-- End Jekyll SEO tag -->
+
+</head>
+
+<body class="home">
+  <div id="container">
+    <div class="wrap">
+    <div id="header">
+      <div id="branding">
+        <a id="site-title" href="/" title="Aspen" rel="Home">
+          <img class="logo" src="assets/images/aspen-wide.png" alt="Aspen Logo" />
+        </a>
+      </div>
+
+      <div id="menu-primary" class="menu-container">
+        <div class="menu">
+          <ul id="menu-primary-items">
+            <!-- <li class="menu-item home"><a class="spec" href="/">Home</a></li> -->
+            <li class="menu-item home"><a class="spec" href="https://github.com/beechnut/aspen">Github</a></li>
+            <!-- <li class="menu-item install"><a class="spec" href="/install.html">Install</a></li> -->
+            <!-- <li class="menu-item getting-started"><a class="spec" href="/getting-started/introduction.html">Guides</a></li> -->
+            <!-- <li class="menu-item learning"><a class="spec" href="/learning.html">Learning</a></li> -->
+            <!-- <li class="menu-item docs"><a class="spec" href="/docs.html">Docs</a></li> -->
+            <!-- <li class="menu-item development"><a class="spec" href="/development.html">Development</a></li> -->
+            <!-- <li class="menu-item blog"><a class="spec" href="/blog/">Blog</a></li> -->
+            <!-- <li class="menu-item packages"><a class="spec" href="https://hex.pm/">Packages</a></li> -->
+          </ul>
+        </div>
+      </div>
+
+      <div class="clear"></div>
+    </div>
+
+    <div id="main">
+
+
+<div id="content">
+  <div class="hfeed">
+  <div class="hentry post">
+    <img src="assets/images/aspen-sample.png" alt="Aspen Sample" class="archive-thumbnail" />
+
+    <div class="entry-summary">
+      <p>
+        Aspen is a dynamic, functional language designed for building scalable and maintainable applications.
+      </p>
+
+      <p>
+        Aspen leverages the Erlang VM, known for running low-latency, distributed and fault-tolerant systems, while also being successfully used in web development and the embedded software domain.
+      </p>
+
+      <p>
+        To learn more about Aspen, check our <a href="https://github.com/beechnut/aspen">getting started guide in the README on Github</a>. Or keep reading to get an overview of the platform, language and tools.
+      </p>
+    </div>
+  </div>
+
+  <div class="hentry post">
+    <h3>Language Features</h3>
+  </div>
+
+  <div class="hentry post">
+    <h4>Simplicity</h4>
+    <div class="entry-summary">
+
+      <p>Aspen code is a drastically simpler way of generating data for graph databases than writing out Cypher. Sketch out and iterate on data models while spending less energy on Cypher syntax and formatting.</p>
+
+<figure class="highlight"><pre><code class="language-elixir" data-lang="elixir"><span class="c1"># Direct Aspen how to process the narrative data</span>
+<span class="k">default</span> <span class="n">Person, name</span>
+<span class="k">default_attribute</span> <span class="n">Employer, company_name</span>
+<span class="k">reciprocal</span> <span class="n">knows, is friends with</span>
+
+<span class="c1"># Write out the narrative data</span>
+<span class="n">(</span><span class="s2">Matt</span><span class="n">) [</span><span class="ss">is friends with</span><span class="n">] (</span><span class="s2">Brianna</span><span class="n">).</span>
+<span class="n">(</span><span class="s2">Eliza</span><span class="n">) [</span><span class="ss">knows</span><span class="n">] (</span><span class="s2">Brianna</span><span class="n">).</span>
+<span class="n">(</span><span class="s2">Matt</span><span class="n">) [</span><span class="ss">is friends with</span><span class="n">] (</span><span class="s2">Eliza</span><span class="n">).</span>
+
+<span class="n">(</span><span class="s2">Matt</span><span class="n">) [</span><span class="ss">works for</span><span class="n">] (</span><span class="s2">Employer, UMass Boston</span><span class="n">).</span>
+</code></pre></figure>
+
+<figure class="highlight"><pre><code class="language-cypher" data-lang="cypher"><span class="c1"># Cypher data generated from the above Aspen.</span>
+MERGE (person-matt:Person {name: "Matt"})
+, (person-brianna:Person {name: "Brianna"})
+, (person-eliza:Person {name: "Eliza"})
+, (employer-umass-boston:Employer {company_name: "UMass Boston"})
+
+, (person-matt)-[:IS_FRIENDS_WITH]-(person-brianna)
+, (person-eliza)-[:KNOWS]-(person-brianna)
+, (person-matt)-[:IS_FRIENDS_WITH]-(person-eliza)
+, (person-matt)-[:WORKS_FOR]->(employer-umass-boston)
+</code></pre></figure>
+
+      <p>In the small example above, Aspen requires 61% fewer characters to represent the same data, and that ratio will get smaller and smaller the more Aspen there is. Aspen lets you spend less time typing Cypher syntax and more time thinking about your data.</p>
+    </div>
+  </div>
+
+  <div class="hentry post">
+    <h4>Auto-nicknaming</h4>
+
+    <div class="entry-summary">
+      <p>
+        Writing Cypher directly means having to keep track of which nodes and edges you've instantiated, what their nicknames are, and then building relationships using those nicknames. Aspen relieves you of this mental load, letting you focus just on your data modeling.
+      </p>
+    </div>
+  </div>
+
+  <div class="hentry post">
+    <h4>(Coming soon) Custom grammars</h4>
+
+    <div class="entry-summary">
+      <p>
+        Aspen aspires to let you write simply but produce rich, complicated graph data. When they're ready, custom grammars will enable you to write simple sentences with no markup, and map the parameters to complex Cypher statements.
+      </p>
+
+<figure class="highlight"><pre><code class="language-elixir" data-lang="elixir"><span class="n"><span class="c1"># Custom grammar</span>
+map
+  (<span class="ss">Person</span> <span class="s2">a</span>) donated $(<span class="ss">float</span> <span class="s2">amt</span>) to (<span class="ss">Person</span> <span class="s2">b</span>).
+  (<span class="ss">Person</span> <span class="s2">a</span>) gave (<span class="ss">Person</span> <span class="s2">b</span>) $(<span class="ss">float</span> <span class="s2">amt</span>).
+to
+  ({<span class="s2">a</span>})-[:GAVE_DONATION]->(Donation {amount: {<span class="s2">amt</span>}})<-[:RECEIVED_DONATION]-({<span class="s2">b</span>})
+
+<span class="c1"># Narrative data</span>
+Matt donated $20 to Hélène.
+Krista gave Hélène $30.75.
+</span></code></pre></figure>
+
+<figure class="highlight"><pre><code class="language-cypher" data-lang="cypher"><span class="n"><span class="c1"># Cypher generated from the above custom grammar and narrative</span>
+(Person {name: "Matt"})-[:GAVE_DONATION]->(Donation {amount: 20.0})<-[:RECEIVED_DONATION]-(Person {name: "Hélène"})
+(Person {name: "Krista"})-[:GAVE_DONATION]->(Donation {amount: 30.5})<-[:RECEIVED_DONATION]-(Person {name: "Hélène"})
+</span></code></pre></figure>
+
+    </div>
+  </div>
+
+  <div class="hentry post">
+    <h3>Tooling features</h3>
+  </div>
+
+  <div class="hentry post">
+    <h4>Compilation</h4>
+
+    <div class="entry-summary">
+      <p>The Aspen command-line tool compiles Aspen files to Cypher.</p>
+
+      <p>In future versions of Aspen, we expect to let you create projects with many Aspen files, which would then build into one big Cypher file.</p>
+    </div>
+  </div>
+
+  <div class="hentry post">
+    <h4>(Coming soon) Aspen Notebook for live editing</h4>
+
+    <div class="entry-summary">
+      <p>
+        Let's be honest: graph data is complex. Aspen syntax can only simplify to a certain degree, so we have plans to create a live editor. On the left side, you'll write Aspen, and on the right side, you'll see the Cypher and/or the visual graph representation of your data.
+      </p>
+
+      <p>You'll be able to use Aspen Notebook to iterate on your data, and if you'd like, publish to a Neo4j instance.</p>
+    </div>
+  </div>
+</div>
+
+</div><!-- #content -->
+
+   <!--      <div id="sidebar-primary" class="sidebar">
+          <div class="widget news">
+          <h3>
+            News: <a href="/blog/2020/01/27/elixir-v1-10-0-released/">Aspen v1.10 released</a>
+          </h3>
+          </div>
+
+          <div class="widget search">
+            <form method="get" id="search-form" class="search-form" action="https://www.google.com/search" onsubmit="document.getElementById('searchq').value = document.getElementById('searchfield').value + ' site:elixir-lang.org | site:hexdocs.pm/elixir | site:hexdocs.pm/mix | site:hexdocs.pm/eex | site:hexdocs.pm/logger | site:hexdocs.pm/iex | site:hexdocs.pm/ex_unit'; return true;">
+              <input type="hidden" id="searchq" name="q" value="">
+              <input class="search-text" type="text" placeholder="Search..." id="searchfield" aria-label="Search box">
+              <input class="search-submit button" name="submit" type="submit" value="Search" aria-label="Search button">
+            </form>
+          </div>
+
+          <div class="widget events">
+            <h3 class="widget-title">Upcoming conferences</h3>
+
+            <a href="http://bit.ly/2OH94JA">
+              <img src="https://i.imgur.com/97boNMf.png" alt="CodeBeam SF" style="max-width:240px; height:auto;" /><br />
+              <span><strong>San Francisco, California</strong> | Conference 5–6 March | Training 2–4 March</span>
+            </a>
+
+            <a href="https://www2.elixirconf.eu/l/23452/2019-11-25/6t44sx">
+              <img src="https://esl-conf-staging.s3.eu-central-1.amazonaws.com/esl-conf-stg/media/files/000/000/935/original/elixirconfeu2020-elixirlang.jpg" alt="AspenConf EU 2020" style="max-width:240px; height:auto;" /><br />
+              <span><strong>Warsaw, Poland</strong> | Conference 29–30 April | Training 28 April</span>
+            </a>
+          </div>
+
+
+          <div class="widget">
+            <h3 class="widget-title">Official Channels</h3>
+            <ul>
+              <li><a class="spec" href="irc://irc.freenode.net/elixir-lang">#elixir-lang on freenode IRC</a></li>
+              <li><a class="spec" href="https://twitter.com/elixirlang">@elixirlang on Twitter</a></li>
+            </ul>
+          </div>
+
+          <div id="mini-docu" class="widget">
+            <a href="http://doc.honeypot.io/elixir-documentary-2018/?utm_source=elixir_home&utm_medium=referral">
+              <div class="mini-docu-cta">
+                <div class="mini-docu-copy">Watch the Aspen<br />mini-documentary!</div>
+              </div>
+            </a>
+          </div>
+
+
+          <div class="widget">
+            <h3 class="widget-title">Join the Community</h3>
+            <ul>
+              <li><a class="spec" href="http://elixirforum.com">Aspen Forum</a></li>
+              <li><a class="spec" href="https://elixir-slackin.herokuapp.com/">Aspen on Slack</a></li>
+              <li><a class="spec" href="https://discord.gg/elixir">Aspen on Discord</a></li>
+              <li><a class="spec" href="http://elixir.meetup.com">Meetups around the world</a></li>
+              <li><a class="spec" href="https://github.com/elixir-lang/elixir/wiki">Wiki with events and resources maintained by the community</a></li>
+            </ul>
+          </div>
+
+          <div id="eef" class="widget">
+            <a href="https://erlef.org/" title="Join the Erlang Ecosystem Foundation"><img src="/images/logo/eef.png" alt="Join the Erlang Ecosystem Foundation" width="174" style="margin-top:-10px" /></a>
+          </div>
+
+          <div class="widget">
+            <h3 class="widget-title">Important links</h3>
+            <ul>
+              <li><a class="spec" href="https://github.com/elixir-lang/elixir">Source Code & Contributing</a></li>
+              <li><a class="spec" href="https://github.com/elixir-lang/elixir/issues">Issues tracker</a></li>
+              <li><a class="spec" href="https://github.com/elixir-lang/elixir/wiki/Code-Editor-Support">Code Editor Support</a></li>
+              <li><a class="spec" href="/crash-course.html">Crash course for Erlang developers</a></li>
+            </ul>
+          </div>
+
+          <div id="elixir-radar" class="widget">
+            <h3 class="widget-title">Aspen Radar Newsletter</h3>
+            <p>A weekly Aspen email newsletter with content curated by Plataformatec.</p>
+            <div class="elixir-radar-cta">
+              <div class="cta-copy">
+                <div class="cta-title">
+                  Aspen Radar
+                </div>
+                <div class="cta-subtitle">
+                  weekly newsletter
+                </div>
+              </div>
+              <div class="cta-button-container">
+                <a href="http://plataformatec.com.br/elixir-radar/?utm_campaign=elixir_lang_cta&utm_medium=cta&utm_source=elixir_lang_website" class="cta-button">
+                  Subscribe now
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div> -->
+
+      </div><!-- #main -->
+
+      <div class="clear"></div>
+
+      <div id="copyright">
+        &copy; 2020 Matt Cloyd. All rights reserved.
+        <br/>
+        <br/>I took all of the markup for this webpage from <a href="https://elixir-lang.org">Elixir</a>, just to set up a quick website.
+      </br>This will be rectified soon. Many thanks to Plataformatec.
+      </div>
+    </div><!-- .wrap -->
+  </div><!-- #container -->
+</body>
+</html>
+
