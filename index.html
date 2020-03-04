@@ -6,20 +6,20 @@
   <title>Aspen</title>
   <!-- <link href="http://feeds.feedburner.com/AspenLang" rel="alternate" title="Aspen's Blog" type="application/atom+xml" /> -->
 
-  <link rel="apple-touch-icon" sizes="57x57" href="/favicon/apple-icon-57x57.png">
-  <link rel="apple-touch-icon" sizes="60x60" href="/favicon/apple-icon-60x60.png">
-  <link rel="apple-touch-icon" sizes="72x72" href="/favicon/apple-icon-72x72.png">
-  <link rel="apple-touch-icon" sizes="76x76" href="/favicon/apple-icon-76x76.png">
-  <link rel="apple-touch-icon" sizes="114x114" href="/favicon/apple-icon-114x114.png">
-  <link rel="apple-touch-icon" sizes="120x120" href="/favicon/apple-icon-120x120.png">
-  <link rel="apple-touch-icon" sizes="144x144" href="/favicon/apple-icon-144x144.png">
-  <link rel="apple-touch-icon" sizes="152x152" href="/favicon/apple-icon-152x152.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-icon-180x180.png">
-  <link rel="icon" type="image/png" sizes="192x192"  href="/favicon/android-icon-192x192.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="96x96" href="/favicon/favicon-96x96.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
-  <link rel="manifest" href="/favicon/manifest.json">
+  <link rel="apple-touch-icon" sizes="57x57" href="assets/images/favicon/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="assets/images/favicon/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="assets/images/favicon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="assets/images/favicon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="assets/images/favicon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="assets/images/favicon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="assets/images/favicon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="assets/images/favicon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="assets/images/favicon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/faviconassets/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="assets/images/faviconassets/images/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/images/faviconassets/images/favicon-16x16.png">
+  <link rel="manifest" href="assets/images/favicon/manifest.json">
   <meta name="msapplication-TileColor" content="#ffffff">
   <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
   <meta name="theme-color" content="#ffffff">
@@ -32,7 +32,7 @@
   <!--<![endif]-->
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <link rel="stylesheet" id="font-bitter-css" href="//fonts.googleapis.com/css?family=Bitter:400,700" type="text/css" media="screen" />
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon/favicon.ico" />
+  <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon/favicon.ico" />
   <!-- Begin Jekyll SEO tag v2.6.1 -->
   <meta name="generator" content="Jekyll v3.8.5" />
   <meta property="og:title" content="http://aspen-lang.org" />
@@ -62,7 +62,7 @@
         <div class="menu">
           <ul id="menu-primary-items">
             <!-- <li class="menu-item home"><a class="spec" href="/">Home</a></li> -->
-            <li class="menu-item home"><a class="spec" href="https://github.com/beechnut/aspen">Github</a></li>
+            <li class="menu-item home"><a class="spec" href="https://github.com/beechnut/aspen">View on Github</a></li>
             <!-- <li class="menu-item install"><a class="spec" href="/install.html">Install</a></li> -->
             <!-- <li class="menu-item getting-started"><a class="spec" href="/getting-started/introduction.html">Guides</a></li> -->
             <!-- <li class="menu-item learning"><a class="spec" href="/learning.html">Learning</a></li> -->
@@ -84,18 +84,21 @@
   <div class="hfeed">
   <div class="hentry post">
     <img src="assets/images/aspen-sample.png" alt="Aspen Sample" class="archive-thumbnail" />
-
     <div class="entry-summary">
       <p>
         Aspen is a simple markup language for creating graph data.
       </p>
 
       <p>
-        Aspen uses simple markup (and soon, custom grammars) to let you write simple text and compile it to rich, valid Cypher, for use in Neo4j graph databases.
+        Aspen lets you write about people, places, things, and the relationships between them using simple markup (and soon, custom grammars), and converts to valid Cypher for use in Neo4j graph databases.
       </p>
 
       <p>
-        To learn more about Aspen, check our <a href="https://github.com/beechnut/aspen">getting started guide in the README on Github</a>. Or keep reading to get an overview of the platform, language and tools.
+        Aspen is both a markup language and a software tool that converts text to Cypher.
+      </p>
+
+      <p>
+        To learn more about Aspen, check our <a href="https://github.com/beechnut/aspen">getting started guide in the README on Github</a>. Or keep reading to get an overview of the language and tools.
       </p>
     </div>
   </div>
@@ -108,7 +111,7 @@
     <h4>Simplicity</h4>
     <div class="entry-summary">
 
-      <p>Aspen code is a drastically simpler way of generating data for graph databases than writing out Cypher. Sketch out and iterate on data models while spending less energy on Cypher syntax and formatting.</p>
+      <p>Aspen code is a drastically simpler way of generating data for Neo4j than writing out Cypher, its native language. Sketch out and iterate on data models while spending less energy on Cypher syntax and formatting.</p>
 
 <figure class="highlight"><pre><code class="language-elixir" data-lang="elixir"><span class="c1"># Direct Aspen how to process the narrative data</span>
 <span class="k">default</span> <span class="n">Person, name</span>
@@ -124,15 +127,15 @@
 </code></pre></figure>
 
 <figure class="highlight"><pre><code class="language-cypher" data-lang="cypher"><span class="c1"># Cypher data generated from the above Aspen.</span>
-MERGE (person-matt:Person {name: "Matt"})
-, (person-brianna:Person {name: "Brianna"})
-, (person-eliza:Person {name: "Eliza"})
-, (employer-umass-boston:Employer {company_name: "UMass Boston"})
+<span class="k">MERGE</span> (<span class="n">person-matt</span><span class="o">:Person</span> {<span class="ss">name:</span> <span class="s2">"Matt"</span>})
+, (<span class="n">person-brianna</span><span class="o">:Person</span> {<span class="ss">name:</span> <span class="s2">"Brianna"</span>})
+, (<span class="n">person-eliza</span><span class="o">:Person</span> {<span class="ss">name:</span> <span class="s2">"Eliza"</span>})
+, (<span class="n">employer-umass-boston</span><span class="o">:Employer</span> {<span class="ss">company_name:</span> <span class="s2">"UMass Boston"</span>})
 
-, (person-matt)-[:IS_FRIENDS_WITH]-(person-brianna)
-, (person-eliza)-[:KNOWS]-(person-brianna)
-, (person-matt)-[:IS_FRIENDS_WITH]-(person-eliza)
-, (person-matt)-[:WORKS_FOR]->(employer-umass-boston)
+, (<span class="n">person-matt</span>)-[<span class="ss">:IS_FRIENDS_WITH</span>]-(<span class="n">person-brianna</span>)
+, (<span class="n">person-eliza</span>)-[<span class="ss">:KNOWS</span>]-(<span class="n">person-brianna</span>)
+, (<span class="n">person-matt</span>)-[<span class="ss">:IS_FRIENDS_WITH</span>]-(<span class="n">person-eliza</span>)
+, (<span class="n">person-matt</span>)-[<span class="ss">:WORKS_FOR</span>]->(<span class="n">employer-umass-boston</span>)
 </code></pre></figure>
 
       <p>In the small example above, Aspen requires 61% fewer characters to represent the same data, and that ratio will get smaller and smaller the more Aspen there is. Aspen lets you spend less time typing Cypher syntax and more time thinking about your data.</p>
@@ -157,12 +160,14 @@ MERGE (person-matt:Person {name: "Matt"})
         Aspen aspires to let you write simply but produce rich, complicated graph data. When they're ready, custom grammars will enable you to write simple sentences with no markup, and map the parameters to complex Cypher statements.
       </p>
 
-<figure class="highlight"><pre><code class="language-elixir" data-lang="elixir"><span class="n"><span class="c1"># Custom grammar</span>
-map
+<figure class="highlight"><pre><code class="language-elixir" data-lang="elixir"><span class="k">default</span> <span class="n">Person, name</span>
+
+<span class="c1"># Custom grammar</span>
+<span class="k">map</span>
   (<span class="ss">Person</span> <span class="s2">a</span>) donated $(<span class="ss">float</span> <span class="s2">amt</span>) to (<span class="ss">Person</span> <span class="s2">b</span>).
   (<span class="ss">Person</span> <span class="s2">a</span>) gave (<span class="ss">Person</span> <span class="s2">b</span>) $(<span class="ss">float</span> <span class="s2">amt</span>).
-to
-  ({<span class="s2">a</span>})-[:GAVE_DONATION]->(Donation {amount: {<span class="s2">amt</span>}})<-[:RECEIVED_DONATION]-({<span class="s2">b</span>})
+<span class="k">to</span>
+  ({<span class="s2">a</span>})-[<span class="ss">:GAVE_DONATION</span>]->(<span class="ss">Donation</span> {<span class="ss">amount:</span> {<span class="s2">amt</span>}})<-[<span class="ss">:RECEIVED_DONATION</span>]-({<span class="s2">b</span>})
 
 <span class="c1"># Narrative data</span>
 Matt donated $20 to Hélène.
@@ -170,8 +175,8 @@ Krista gave Hélène $30.75.
 </span></code></pre></figure>
 
 <figure class="highlight"><pre><code class="language-cypher" data-lang="cypher"><span class="n"><span class="c1"># Cypher generated from the above custom grammar and narrative</span>
-(Person {name: "Matt"})-[:GAVE_DONATION]->(Donation {amount: 20.0})<-[:RECEIVED_DONATION]-(Person {name: "Hélène"})
-(Person {name: "Krista"})-[:GAVE_DONATION]->(Donation {amount: 30.5})<-[:RECEIVED_DONATION]-(Person {name: "Hélène"})
+<span class="k">MERGE</span> (<span class="k">Person</span> {<span class="ss">name:</span> <span class="s2">"Matt"</span>})-[<span class="ss">:GAVE_DONATION</span>]->(<span class="k">Donation</span> {<span class="ss">amount:</span> <span class="mi">20.0</span>})<-[<span class="ss">:RECEIVED_DONATION</span>]-(<span class="k">Person</span> {<span class="ss">name:</span> <span class="s2">"Hélène"</span>})
+, (<span class="k">Person</span> {<span class="ss">name:</span> <span class="s2">"Krista"</span>})-[<span class="ss">:GAVE_DONATION</span>]->(<span class="k">Donation</span> {<span class="ss">amount:</span> <span class="mi">30.75</span>})<-[<span class="ss">:RECEIVED_DONATION</span>]-(<span class="k">Person</span> {name: <span class="s2">"Hélène"</span>})
 </span></code></pre></figure>
 
     </div>
@@ -307,8 +312,8 @@ Krista gave Hélène $30.75.
       <div id="copyright">
         &copy; 2020 Matt Cloyd. All rights reserved.
         <br/>
-        <br/>Logo generated with <a href="https://canva.com">Canva</a>, just to set up a quick website.
-        <br/>I took all of the markup for this webpage from <a href="https://elixir-lang.org">Elixir</a>, just to set up a quick website.
+        <br/>Logo created with <a href="https://canva.com">Canva</a>.
+        <br/>I took all of the markup and styling for this webpage from <a href="https://elixir-lang.org">Elixir</a>, just to set up a quick website.
         </br>This will be rectified soon. Many thanks to Plataformatec.
       </div>
     </div><!-- .wrap -->
