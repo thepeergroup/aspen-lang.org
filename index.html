@@ -42,7 +42,7 @@
   <link rel="canonical" href="https://aspen-lang.org/" />
   <meta property="og:url" content="https://aspen-lang.org/" />
   <meta property="og:site_name" content="Aspen - Simple graph data" />
-  <meta property="og:image" content="https://aspen-lang.org/assets/images/aspen-square.png" />
+  <meta property="og:image" content="https://aspen-lang.org/assets/images/logo/aspen-red-square.png" />
 
   <script type="application/ld+json">
   {"@type":"WebSite","headline":"Aspen - Simple graph data","url":"https://aspen-lang.org/","name":"Aspen - Simple graph data","description":"Website for the Aspen language","@context":"https://schema.org"}</script>
@@ -56,7 +56,7 @@
     <div id="header">
       <div id="branding">
         <a id="site-title" href="/" title="Aspen" rel="Home">
-          <img class="logo" src="assets/images/aspen-wide.png" alt="Aspen Logo" />
+          <img class="logo" src="assets/images/logo/aspen-light-wide.png" alt="Aspen Logo" />
         </a>
       </div>
 
@@ -97,11 +97,15 @@
       </blockquote>
 
       <p>
-        Aspen lets you write about people, places, things, and the relationships between them using simple markup (and soon, custom grammars), and converts to valid Cypher for use in Neo4j graph databases.
+        Aspen lets you write about people, places, things, and the relationships between them using simple markup, and converts your text to valid Cypher that can be used in Neo4j graph databases.
       </p>
 
       <p>
-        Aspen is both a markup language and a software tool that converts text to Cypher, with the intent of making data generation easier. (Aspen does not aspire to be a query language—Cypher is truly amazing at that.)
+        So, Aspen is both a markup language and a software tool that converts text to Cypher.
+      </p>
+
+      <p>
+        Aspen does not aspire to be a query language—Cypher is a truly elegant language for querying graph data, and we're frankly in awe of it. Aspen is intended to make it easy to write graph data by hand.
       </p>
 
       <p>
@@ -123,7 +127,7 @@
         <br /><small>- No one (and that's not a precise comparison, but ok)</small>
       </blockquote>
 
-      <p>Aspen code is a drastically simpler way of generating data for Neo4j than writing out Cypher, its native language. Sketch out and iterate on data models while spending less energy on Cypher syntax and formatting.</p>
+      <p>If you need to generate data for your Neo4j graph database, writing Aspen is much simpler than writing Cypher. You can use Aspen to sketch out your data and iterate on data models, without having to think about Cypher syntax and formatting, or keeping track of matches and their nicknames.</p>
 
       <p>
         This Aspen code:
@@ -145,10 +149,10 @@
         produces this Cypher code:
       </p>
 
-<figure class="highlight"><pre><code class="language-cypher" data-lang="cypher"><span class="k">MERGE</span> (<span class="n">person_matt</span><span class="o">:Person</span> {<span class="ss">name:</span> <span class="s2">"Matt"</span>})
-<span class="k">MERGE</span> (<span class="n">person_brianna</span><span class="o">:Person</span> {<span class="ss">name:</span> <span class="s2">"Brianna"</span>})
-<span class="k">MERGE</span> (<span class="n">person_eliza</span><span class="o">:Person</span> {<span class="ss">name:</span> <span class="s2">"Eliza"</span>})
-<span class="k">MERGE</span> (<span class="n">employer_umass_boston</span><span class="o">:Employer</span> {<span class="ss">company_name:</span> <span class="s2">"UMass Boston"</span>})
+<figure class="highlight"><pre><code class="language-cypher" data-lang="cypher"><span class="k">MERGE</span> (<span class="n">person_matt</span><span class="o">:Person</span> { <span class="ss">name:</span> <span class="s2">"Matt"</span> })
+<span class="k">MERGE</span> (<span class="n">person_brianna</span><span class="o">:Person</span> { <span class="ss">name:</span> <span class="s2">"Brianna"</span> })
+<span class="k">MERGE</span> (<span class="n">person_eliza</span><span class="o">:Person</span> { <span class="ss">name:</span> <span class="s2">"Eliza"</span> })
+<span class="k">MERGE</span> (<span class="n">employer_umass_boston</span><span class="o">:Employer</span> { <span class="ss">company_name:</span> <span class="s2">"UMass Boston"</span> })
 
 <span class="k">MERGE</span> (<span class="n">person_matt</span>)-[<span class="ss">:IS_FRIENDS_WITH</span>]-(<span class="n">person_brianna</span>)
 <span class="k">MERGE</span> (<span class="n">person_eliza</span>)-[<span class="ss">:KNOWS</span>]-(<span class="n">person_brianna</span>)
@@ -162,9 +166,7 @@
       </p>
       <img src="assets/images/aspen-graph-wide.png" alt="Aspen Sample" />
 
-      <p>The content of an Aspen file is more in sync with the content of the graph data, whereas writing Cypher involves a lot of extra content, like nicknames. Aspen lets you spend less time typing Cypher syntax and more time thinking about your data.</p>
-
-      <p>In the small example above, Aspen requires less than two-thirds of the characters to represent the same data in Cypher, and that ratio is expected get smaller the more Aspen there is.</p>
+      <p>In the small example above, Aspen requires less than two-thirds of the characters to represent the same data in Cypher, and that ratio is expected get smaller the more Aspen there is. Aspen lets you spend less time typing Cypher syntax and more time thinking about your data.</p>
     </div>
   </div>
 
@@ -173,7 +175,7 @@
 
     <div class="entry-summary">
       <p>
-        Writing Cypher directly means having to keep track of which nodes and edges you've instantiated, what their nicknames are, and then building relationships using those nicknames. Aspen relieves you of this mental load, letting you focus just on your data modeling.
+        Cypher is an amazing query language, but when you're adding data with Cypher, you're required to keep track of matches and nicknames as you build relationships. Aspen relieves you of that extra mental load, which lets you focus on your data.
       </p>
     </div>
   </div>
@@ -183,7 +185,7 @@
 
     <div class="entry-summary">
       <p>
-        Aspen aspires to let you write simply but produce rich, complicated graph data. When they're ready, custom grammars will enable you to write simple sentences with no markup, and map the parameters to complex Cypher statements.
+        Aspen aspires to let you write simply but produce rich, complicated graph data. They're currently in development, but when they're ready, custom grammars will enable you to write simple sentences with no markup, and map the parameters to complex Cypher statements.
       </p>
 
 <figure class="highlight"><pre><code class="language-elixir" data-lang="elixir"><span class="k">default</span> <span class="n">Person, name</span>
@@ -193,7 +195,7 @@
   (<span class="ss">Person</span> <span class="s2">a</span>) donated $(<span class="ss">float</span> <span class="s2">amt</span>) to (<span class="ss">Person</span> <span class="s2">b</span>).
   (<span class="ss">Person</span> <span class="s2">a</span>) gave (<span class="ss">Person</span> <span class="s2">b</span>) $(<span class="ss">float</span> <span class="s2">amt</span>).
 <span class="k">to</span>
-  ({<span class="s2">a</span>})-[<span class="ss">:GAVE_DONATION</span>]->(<span class="ss">Donation</span> {<span class="ss">amount:</span> {<span class="s2">amt</span>}})<-[<span class="ss">:RECEIVED_DONATION</span>]-({<span class="s2">b</span>})
+  ({<span class="s2">a</span>})-[<span class="ss">:GAVE_DONATION</span>]->(<span class="k">:Donation</span> { <span class="ss">amount:</span> {<span class="s2">amt</span>} })<-[<span class="ss">:RECEIVED_DONATION</span>]-({<span class="s2">b</span>})
 
 <span class="c1"># Narrative data</span>
 Matt donated $20 to Hélène.
@@ -201,9 +203,16 @@ Krista gave Hélène $30.75.
 </span></code></pre></figure>
 
 <figure class="highlight"><pre><code class="language-cypher" data-lang="cypher"><span class="n"><span class="c1"># Cypher generated from the above custom grammar and narrative</span>
-<span class="k">MERGE</span> (<span class="k">Person</span> {<span class="ss">name:</span> <span class="s2">"Matt"</span>})-[<span class="ss">:GAVE_DONATION</span>]->(<span class="k">Donation</span> {<span class="ss">amount:</span> <span class="mi">20.0</span>})<-[<span class="ss">:RECEIVED_DONATION</span>]-(<span class="k">Person</span> {<span class="ss">name:</span> <span class="s2">"Hélène"</span>})
-<span class="k">MERGE</span> (<span class="k">Person</span> {<span class="ss">name:</span> <span class="s2">"Krista"</span>})-[<span class="ss">:GAVE_DONATION</span>]->(<span class="k">Donation</span> {<span class="ss">amount:</span> <span class="mi">30.75</span>})<-[<span class="ss">:RECEIVED_DONATION</span>]-(<span class="k">Person</span> {name: <span class="s2">"Hélène"</span>})
+<span class="k">MERGE</span> (<span class="n">person_matt</span><span class="o">:Person</span> { <span class="ss">name:</span> <span class="s2">"Matt"</span> })
+<span class="k">MERGE</span> (<span class="n">person_helene</span><span class="o">:Person</span> { <span class="ss">name:</span> <span class="s2">"Hélène"</span> })
+<span class="k">MERGE</span> (<span class="n">person_krista</span><span class="o">:Person</span> { <span class="ss">name:</span> <span class="s2">"Krista"</span> })
+
+<span class="k">MERGE</span> (<span class="n">person_matt</span>)-[<span class="ss">:GAVE_DONATION</span>]->(<span class="k">:Donation</span> { <span class="ss">amount:</span> <span class="mi">20.0</span> })<-[<span class="ss">:RECEIVED_DONATION</span>]-(<span class="n">person_helene</span>)
+<span class="k">MERGE</span> (<span class="n">person_krista</span>)-[<span class="ss">:GAVE_DONATION</span>]->(<span class="k">:Donation</span> { <span class="ss">amount:</span> <span class="mi">30.75</span> })<-[<span class="ss">:RECEIVED_DONATION</span>]-(<span class="n">person_helene</span>)
+;
 </span></code></pre></figure>
+
+    <img src="assets/images/donation-graph.png" alt="Aspen Sample" />
 
     </div>
   </div>
@@ -227,7 +236,7 @@ Krista gave Hélène $30.75.
 
     <div class="entry-summary">
       <p>
-        Let's be honest: graph data is complex. Aspen syntax can only simplify to a certain degree, so we have plans to create a live editor. On the left side, you'll write Aspen, and on the right side, you'll see the Cypher and/or the visual graph representation of your data.
+        Let's be honest: graph data is complex. Aspen syntax can only simplify things to a certain degree, so we have plans to create a live editor called Notebook. On the left side, you'll write Aspen, and on the right side, you'll see the Cypher and/or the visual graph representation of your data.
       </p>
 
       <p>You'll be able to use Aspen Notebook to iterate on your data, and if you'd like, publish to a Neo4j instance.</p>
@@ -242,31 +251,49 @@ Krista gave Hélène $30.75.
   <div class="hentry post">
     <h4>Does Aspen use Natural Language Processing (NLP)?</h4>
     <p>
-      Aspen does not use NLP, and we don't plan to include it. The entire Aspen system is intended to be legible—there's no magic here, and not even any particularly complicated concepts. Unlike <a href="https://community.neo4j.com/t/codex-an-atlas-of-relations/8277" target="_blank">Codex</a> and other projects that turn massive amounts of variable text to graph data, Aspen doesn't have big ambitions. For now, let's see what complexity we can manage using simple ideas and simple patterns.
+      Aspen does not use NLP, and we don't plan to include it. The entire Aspen system is intended to be legible—there's no magic here, or even particularly complex concepts. Compared to ambitious projects like <a href="https://community.neo4j.com/t/codex-an-atlas-of-relations/8277" target="_blank">Codex</a> that seek to convert massive amounts of variable text to graph data, Aspen is humble. For now, let's see what complexity we can manage using simple ideas and simple patterns.
     </p>
   </div>
 
   <div class="hentry post">
     <h4>Why not just import a spreadsheet?</h4>
     <p>
-      If your data is already structured, and importing a CSV is the fastest way to import to the database, import the CSV! Aspen isn't meant for fully-structured data, it's meant for semi-structured text data that doesn't feel quite right in a spreadsheet. Don't force Aspen, just use it if it works.
+      If your data is already structured, and importing a CSV (or JSON, or other structured data) is the fastest and most obvious way to import your data, then import the CSV! Aspen isn't meant for fully-structured data, it's meant for semi-structured text that doesn't feel quite right in a spreadsheet. As the graffiti Buddha in Matt's neighborhood once said: "Find it, don't force it".
+
+    </p>
+    <p>
+      Don't force Aspen, but use it if it works.
+    </p>
+  </div>
+
+  <div class="hentry post">
+    <h4>Can you help me get started using Aspen?</h4>
+    <p>
+      Yes, we'd be happy to!
+    </p>
+    <p>
+      Since the language is in its early days and the installation process isn't what we'd like it to be, just <a href="mailto:cloyd.matt@gmail.com">get in touch</a> and we'll help you get started for free.
+    </p>
+
+    <p>
+      For larger projects, we're open to contract work. If you want to see Aspen grow and mature, we're also open to sponsorship-type arrangements. Feel free to <a href="mailto:cloyd.matt@gmail.com">get in touch</a> and we can talk about what makes sense for us.
     </p>
   </div>
 
   <div class="hentry post">
     <h4>Why did you create Aspen?</h4>
     <p>
-      I created Aspen because I had so many moments where I want to write a paragraph describing a situation, a network, or the factors in a conflict (I'm studying conflict resolution and <a href="peace.substack.com" target="_blank">writing about peace</a>), and see a representation in graph data. Now, it's possible!
+      In late 2019, Matt (who studies conflict resolution and <a href="peace.substack.com" target="_blank">writes about peace</a>) tried to quickly model the factors in a conflict in Neo4j, using Cypher. So, Aspen came out of a desire to write freeform text describing a network, and quickly visualize it.
     </p>
   </div>
 
   <div class="hentry post">
     <h4>Is there a story behind the name?</h4>
     <p>
-      If you couldn't tell from my Github username (<a href="https://github.com/beechnut/" target="_blank">@beechnut</a>), I'm a bit of a forest geography nerd. I wanted the name to reflect the branching and sometimes tree-like nature of graph data, to be short and pronounceable, and to open up avenues for good puns in case we needed to name. Inspired in part by my forestry experience and in part by <a href="https://store.camposanto.com/products/aspen-poster" target="_blank">the aspen grove</a> in the indie game <a href="http://www.firewatchgame.com/" target="_blank">Firewatch</a>, Aspen seemed perfect.
+      We wanted the name to reflect the branching and sometimes tree-like nature of graph data, to be short and pronounceable, and to provide good puns for naming future parts of the platform. Plus, as you can tell from Matt's Github username (<a href="https://github.com/beechnut/" target="_blank">@beechnut</a>), he's a bit of a forest geography nerd. Inspired in part by forest geography and in part by <a href="https://store.camposanto.com/products/aspen-poster" target="_blank">the aspen grove</a> in the indie game <a href="http://www.firewatchgame.com/" target="_blank">Firewatch</a>, Aspen seemed like the perfect name.
     </p>
     <p>
-      (The tentative package repository for Aspen will <em>absolutely</em> be called the Aspen Grove.)
+      (P.S. The package repository for Aspen will <em>absolutely</em> be called the Aspen Grove.)
     </p>
   </div>
 
@@ -375,7 +402,7 @@ Krista gave Hélène $30.75.
       <div id="copyright">
         &copy; 2020 Matt Cloyd. All rights reserved.
         <br/>
-        <br/>Logo created with <a href="https://canva.com">Canva</a>.
+        <br/>Logo created with help from <a href="https://canva.com">Canva</a>.
         <br/>I took all of the markup and styling for this webpage from <a href="https://elixir-lang.org">Elixir</a>, just to set up a quick website.
         </br>This will be rectified soon. Many thanks to Plataformatec.
       </div>
