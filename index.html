@@ -16,22 +16,30 @@
   <link rel="apple-touch-icon" sizes="152x152" href="assets/images/favicon/apple-icon-152x152.png">
   <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/apple-icon-180x180.png">
   <link rel="icon" type="image/png" sizes="192x192"  href="assets/images/favicon/android-icon-192x192.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/faviconassets/images/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="96x96" href="assets/images/faviconassets/images/favicon-96x96.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="assets/images/faviconassets/images/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="assets/images/favicon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon/favicon-16x16.png">
   <link rel="manifest" href="assets/images/favicon/manifest.json">
   <meta name="msapplication-TileColor" content="#ffffff">
-  <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+  <meta name="msapplication-TileImage" content="assets/images/favicon/ms-icon-144x144.png">
   <meta name="theme-color" content="#ffffff">
 
-  <link rel="stylesheet" type="text/css" href="https://elixir-lang.org/css/style.css" />
+
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
+  <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.css">
+  <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/milligram/1.3.0/milligram.css">
+
+  <link rel="stylesheet" href="assets/style/style.css">
+
+
+  <!-- <link rel="stylesheet" type="text/css" href="https://elixir-lang.org/css/style.css" />
   <link rel="stylesheet" type="text/css" href="https://elixir-lang.org/css/syntax.css" />
-  <link rel="stylesheet" href="https://elixir-lang.org/js/icons/style.css">
+  <link rel="stylesheet" href="https://elixir-lang.org/js/icons/style.css"> -->
   <!--[if lt IE 8]><!-->
-  <link rel="stylesheet" href="https://elixir-lang.org/js/icons/ie7/ie7.css">
+  <!-- <link rel="stylesheet" href="https://elixir-lang.org/js/icons/ie7/ie7.css"> -->
   <!--<![endif]-->
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <link rel="stylesheet" id="font-bitter-css" href="//fonts.googleapis.com/css?family=Bitter:400,700" type="text/css" media="screen" />
+  <!-- <link rel="stylesheet" id="font-bitter-css" href="//fonts.googleapis.com/css?family=Bitter:400,700" type="text/css" media="screen" /> -->
   <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon/favicon.ico" />
   <!-- Begin Jekyll SEO tag v2.6.1 -->
   <meta name="generator" content="Jekyll v3.8.5" />
@@ -50,17 +58,29 @@
 
 </head>
 
-<body class="home">
-  <div id="container">
+<body>
+  <main class="wrapper">
+    <nav class="navigation">
+      <section class="container">
+        <a class="navigation-title" href="https://aspen-lang.org" title="Aspen - Simple graph data">
+          <img class="logo tiny" src="assets/images/logo/aspen-gold-450.png" width="25" alt="Aspen logo" />
+          <h1 class="title">
+            Aspen
+          </h1>
+        </a>
+      </section>
+    </nav>
+
     <div class="wrap">
-    <div id="header">
-      <div id="branding">
+    <div class="row" id="header">
+
+      <div class="column column-50" id="branding">
         <a id="site-title" href="/" title="Aspen" rel="Home">
           <img class="logo" src="assets/images/logo/aspen-light-wide.png" alt="Aspen Logo" />
         </a>
       </div>
 
-      <div id="menu-primary" class="menu-container">
+      <div id="menu-primary" class="column menu-container">
         <div class="menu">
           <ul id="menu-primary-items">
             <!-- <li class="menu-item home"><a class="spec" href="/">Home</a></li> -->
@@ -77,61 +97,62 @@
       </div>
 
       <div class="clear"></div>
-    </div>
 
-    <div id="main">
+    </div> <!-- #header -->
+
+    <div class="row" id="main">
 
 
-<div id="content">
-  <div class="hfeed">
-  <div class="hentry post">
-    <img src="assets/images/aspen-sample.png" alt="Aspen Sample" class="archive-thumbnail" />
-    <div class="entry-summary">
-      <p>
-        Aspen is a simple markup language for creating graph data.
-      </p>
+    <div class="column" id="content">
+      <div class="hfeed">
+      <div class="hentry post">
+        <!-- <img src="assets/images/aspen-sample.png" alt="Aspen Sample" class="archive-thumbnail" /> -->
+        <div class="entry-summary">
+          <p>
+            Aspen is a simple markup language for creating graph data.
+          </p>
 
-      <blockquote>
-        Aspen is like Markdown but for graph data.
-        <br /><small>- Nobody</small>
-      </blockquote>
+          <blockquote>
+            Aspen is like Markdown but for graph data.
+            <br /><small>- Nobody</small>
+          </blockquote>
 
-      <p>
-        Aspen lets you write about people, places, things, and the relationships between them using simple markup, and converts your text to valid Cypher that can be used in Neo4j graph databases.
-      </p>
+          <p>
+            Aspen lets you write about people, places, things, and the relationships between them using simple markup, and converts your text to valid Cypher that can be used in Neo4j graph databases.
+          </p>
 
-      <p>
-        So, Aspen is both a markup language and a software tool that converts text to Cypher.
-      </p>
+          <p>
+            So, Aspen is both a markup language and a software tool that converts text to Cypher.
+          </p>
 
-      <p>
-        Aspen does not aspire to be a query language—Cypher is a truly elegant language for querying graph data, and we're frankly in awe of it. Aspen is intended to make it easy to write graph data by hand.
-      </p>
+          <p>
+            Aspen does not aspire to be a query language—Cypher is a truly elegant language for querying graph data, and we're frankly in awe of it. Aspen is intended to make it easy to write graph data by hand.
+          </p>
 
-      <p>
-        To learn more about Aspen, check our <a href="https://github.com/beechnut/aspen">getting started guide in the README on Github</a>. Or keep reading to get an overview of the language and tools.
-      </p>
-    </div>
-  </div>
+          <p>
+            To learn more about Aspen, check our <a href="https://github.com/beechnut/aspen">getting started guide in the README on Github</a>. Or keep reading to get an overview of the language and tools.
+          </p>
+        </div>
+      </div>
 
-  <div class="hentry post">
-    <h3>Language Features</h3>
-  </div>
+      <div class="hentry post">
+        <h3>Language Features</h3>
+      </div>
 
-  <div class="hentry post">
-    <h4>Simplicity</h4>
-    <div class="entry-summary">
+      <div class="hentry post">
+        <h4>Simplicity</h4>
+        <div class="entry-summary">
 
-      <blockquote>
-        Aspen is like Coffeescript or Haml, but for Cypher.
-        <br /><small>- No one (and that's not a precise comparison, but ok)</small>
-      </blockquote>
+          <blockquote>
+            Aspen is like Coffeescript or Haml, but for Cypher.
+            <br /><small>- No one (and that's not a precise comparison, but ok)</small>
+          </blockquote>
 
-      <p>If you need to generate data for your Neo4j graph database, writing Aspen is much simpler than writing Cypher. You can use Aspen to sketch out your data and iterate on data models, without having to think about Cypher syntax and formatting, or keeping track of matches and their nicknames.</p>
+          <p>If you need to generate data for your Neo4j graph database, writing Aspen is much simpler than writing Cypher. You can use Aspen to sketch out your data and iterate on data models, without having to think about Cypher syntax and formatting, or keeping track of matches and their nicknames.</p>
 
-      <p>
-        This Aspen code:
-      </p>
+          <p>
+            This Aspen code:
+          </p>
 <figure class="highlight"><pre><code class="language-elixir" data-lang="elixir"><span class="c1"># Direct Aspen how to process the narrative data</span>
 <span class="k">default</span> <span class="n">Person, name</span>
 <span class="k">default_attribute</span> <span class="n">Employer, company_name</span>
@@ -145,9 +166,9 @@
 <span class="n">(</span><span class="s2">Matt</span><span class="n">) [</span><span class="ss">works for</span><span class="n">] (</span><span class="s2">Employer, UMass Boston</span><span class="n">).</span>
 </code></pre></figure>
 
-      <p>
-        produces this Cypher code:
-      </p>
+          <p>
+            produces this Cypher code:
+          </p>
 
 <figure class="highlight"><pre><code class="language-cypher" data-lang="cypher"><span class="k">MERGE</span> (<span class="n">person_matt</span><span class="o">:Person</span> { <span class="ss">name:</span> <span class="s2">"Matt"</span> })
 <span class="k">MERGE</span> (<span class="n">person_brianna</span><span class="o">:Person</span> { <span class="ss">name:</span> <span class="s2">"Brianna"</span> })
@@ -161,32 +182,32 @@
 ;
 </code></pre></figure>
 
-      <p>
-        which produces this graph:
-      </p>
-      <img src="assets/images/aspen-graph-wide.png" alt="Aspen Sample" />
+          <p>
+            which produces this graph:
+          </p>
+          <img src="assets/images/aspen-graph-wide.png" alt="Aspen Sample" />
 
-      <p>In the small example above, Aspen requires less than two-thirds of the characters to represent the same data in Cypher, and that ratio is expected get smaller the more Aspen there is. Aspen lets you spend less time typing Cypher syntax and more time thinking about your data.</p>
-    </div>
-  </div>
+          <p>In the small example above, Aspen requires less than two-thirds of the characters to represent the same data in Cypher, and that ratio is expected get smaller the more Aspen there is. Aspen lets you spend less time typing Cypher syntax and more time thinking about your data.</p>
+        </div>
+      </div>
 
-  <div class="hentry post">
-    <h4>Auto-nicknaming</h4>
+      <div class="hentry post">
+        <h4>Auto-nicknaming</h4>
 
-    <div class="entry-summary">
-      <p>
-        Cypher is an amazing query language, but when you're adding data with Cypher, you're required to keep track of matches and nicknames as you build relationships. Aspen relieves you of that extra mental load, which lets you focus on your data.
-      </p>
-    </div>
-  </div>
+        <div class="entry-summary">
+          <p>
+            Cypher is an amazing query language, but when you're adding data with Cypher, you're required to keep track of matches and nicknames as you build relationships. Aspen relieves you of that extra mental load, which lets you focus on your data.
+          </p>
+        </div>
+      </div>
 
-  <div class="hentry post">
-    <h4>(Coming soon) Custom grammars</h4>
+      <div class="hentry post">
+        <h4>(Coming soon) Custom grammars</h4>
 
-    <div class="entry-summary">
-      <p>
-        Aspen aspires to let you write simply but produce rich, complicated graph data. They're currently in development, but when they're ready, custom grammars will enable you to write simple sentences with no markup, and map the parameters to complex Cypher statements.
-      </p>
+        <div class="entry-summary">
+          <p>
+            Aspen aspires to let you write simply but produce rich, complicated graph data. They're currently in development, but when they're ready, custom grammars will enable you to write simple sentences with no markup, and map the parameters to complex Cypher statements.
+          </p>
 
 <figure class="highlight"><pre><code class="language-elixir" data-lang="elixir"><span class="k">default</span> <span class="n">Person, name</span>
 
@@ -212,94 +233,94 @@ Krista gave Hélène $30.75.
 ;
 </span></code></pre></figure>
 
-    <img src="assets/images/donation-graph.png" alt="Aspen Sample" />
+        <img src="assets/images/donation-graph.png" alt="Aspen Sample" />
+
+        </div>
+      </div>
+
+      <div class="hentry post">
+        <h3>Tooling features</h3>
+      </div>
+
+      <div class="hentry post">
+        <h4>Compilation</h4>
+
+        <div class="entry-summary">
+          <p>The Aspen command-line tool compiles Aspen files to Cypher.</p>
+
+          <p>In future versions of Aspen, we expect to let you create projects with many Aspen files, which would then build into one big Cypher file.</p>
+        </div>
+      </div>
+
+      <div class="hentry post">
+        <h4>(Coming soon) Aspen Notebook for live editing</h4>
+
+        <div class="entry-summary">
+          <p>
+            Let's be honest: graph data is complex. Aspen syntax can only simplify things to a certain degree, so we have plans to create a live editor called Notebook. On the left side, you'll write Aspen, and on the right side, you'll see the Cypher and/or the visual graph representation of your data.
+          </p>
+
+          <p>You'll be able to use Aspen Notebook to iterate on your data, and if you'd like, publish to a Neo4j instance.</p>
+        </div>
+      </div>
+
+
+      <div class="hentry post">
+        <h3>Q&A</h3>
+      </div>
+
+      <div class="hentry post">
+        <h4>Does Aspen use Natural Language Processing (NLP)?</h4>
+        <p>
+          Aspen does not use NLP, and we don't plan to include it. The entire Aspen system is intended to be legible—there's no magic here, or even particularly complex concepts. Compared to ambitious projects like <a href="https://community.neo4j.com/t/codex-an-atlas-of-relations/8277" target="_blank">Codex</a> that seek to convert massive amounts of variable text to graph data, Aspen is humble. For now, let's see what complexity we can manage using simple ideas and simple patterns.
+        </p>
+      </div>
+
+      <div class="hentry post">
+        <h4>Why not just import a spreadsheet?</h4>
+        <p>
+          If your data is already structured, and importing a CSV (or JSON, or other structured data) is the fastest and most obvious way to import your data, then import the CSV! Aspen isn't meant for fully-structured data, it's meant for semi-structured text that doesn't feel quite right in a spreadsheet. As the graffiti Buddha in Matt's neighborhood once said: "Find it, don't force it".
+
+        </p>
+        <p>
+          Don't force Aspen, but use it if it works.
+        </p>
+      </div>
+
+      <div class="hentry post">
+        <h4>Can you help me get started using Aspen?</h4>
+        <p>
+          Yes, we'd be happy to!
+        </p>
+        <p>
+          Since the language is in its early days and the installation process isn't what we'd like it to be, just <a href="mailto:cloyd.matt@gmail.com">get in touch</a> and we'll help you get started for free.
+        </p>
+
+        <p>
+          For larger projects, we're open to contract work. If you want to see Aspen grow and mature, we're also open to sponsorship-type arrangements. Feel free to <a href="mailto:cloyd.matt@gmail.com">get in touch</a> and we can talk about what makes sense for us.
+        </p>
+      </div>
+
+      <div class="hentry post">
+        <h4>Why did you create Aspen?</h4>
+        <p>
+          In late 2019, Matt (who studies conflict resolution and <a href="peace.substack.com" target="_blank">writes about peace</a>) tried to quickly model the factors in a conflict in Neo4j, using Cypher. So, Aspen came out of a desire to write freeform text describing a network, and quickly visualize it.
+        </p>
+      </div>
+
+      <div class="hentry post">
+        <h4>Is there a story behind the name?</h4>
+        <p>
+          We wanted the name to reflect the branching and sometimes tree-like nature of graph data, to be short and pronounceable, and to provide good puns for naming future parts of the platform. Plus, as you can tell from Matt's Github username (<a href="https://github.com/beechnut/" target="_blank">@beechnut</a>), he's a bit of a forest geography nerd. Inspired in part by forest geography and in part by <a href="https://store.camposanto.com/products/aspen-poster" target="_blank">the aspen grove</a> in the indie game <a href="http://www.firewatchgame.com/" target="_blank">Firewatch</a>, Aspen seemed like the perfect name.
+        </p>
+        <p>
+          (P.S. The package repository for Aspen will <em>absolutely</em> be called the Aspen Grove.)
+        </p>
+      </div>
 
     </div>
-  </div>
 
-  <div class="hentry post">
-    <h3>Tooling features</h3>
-  </div>
-
-  <div class="hentry post">
-    <h4>Compilation</h4>
-
-    <div class="entry-summary">
-      <p>The Aspen command-line tool compiles Aspen files to Cypher.</p>
-
-      <p>In future versions of Aspen, we expect to let you create projects with many Aspen files, which would then build into one big Cypher file.</p>
-    </div>
-  </div>
-
-  <div class="hentry post">
-    <h4>(Coming soon) Aspen Notebook for live editing</h4>
-
-    <div class="entry-summary">
-      <p>
-        Let's be honest: graph data is complex. Aspen syntax can only simplify things to a certain degree, so we have plans to create a live editor called Notebook. On the left side, you'll write Aspen, and on the right side, you'll see the Cypher and/or the visual graph representation of your data.
-      </p>
-
-      <p>You'll be able to use Aspen Notebook to iterate on your data, and if you'd like, publish to a Neo4j instance.</p>
-    </div>
-  </div>
-
-
-  <div class="hentry post">
-    <h3>Q&A</h3>
-  </div>
-
-  <div class="hentry post">
-    <h4>Does Aspen use Natural Language Processing (NLP)?</h4>
-    <p>
-      Aspen does not use NLP, and we don't plan to include it. The entire Aspen system is intended to be legible—there's no magic here, or even particularly complex concepts. Compared to ambitious projects like <a href="https://community.neo4j.com/t/codex-an-atlas-of-relations/8277" target="_blank">Codex</a> that seek to convert massive amounts of variable text to graph data, Aspen is humble. For now, let's see what complexity we can manage using simple ideas and simple patterns.
-    </p>
-  </div>
-
-  <div class="hentry post">
-    <h4>Why not just import a spreadsheet?</h4>
-    <p>
-      If your data is already structured, and importing a CSV (or JSON, or other structured data) is the fastest and most obvious way to import your data, then import the CSV! Aspen isn't meant for fully-structured data, it's meant for semi-structured text that doesn't feel quite right in a spreadsheet. As the graffiti Buddha in Matt's neighborhood once said: "Find it, don't force it".
-
-    </p>
-    <p>
-      Don't force Aspen, but use it if it works.
-    </p>
-  </div>
-
-  <div class="hentry post">
-    <h4>Can you help me get started using Aspen?</h4>
-    <p>
-      Yes, we'd be happy to!
-    </p>
-    <p>
-      Since the language is in its early days and the installation process isn't what we'd like it to be, just <a href="mailto:cloyd.matt@gmail.com">get in touch</a> and we'll help you get started for free.
-    </p>
-
-    <p>
-      For larger projects, we're open to contract work. If you want to see Aspen grow and mature, we're also open to sponsorship-type arrangements. Feel free to <a href="mailto:cloyd.matt@gmail.com">get in touch</a> and we can talk about what makes sense for us.
-    </p>
-  </div>
-
-  <div class="hentry post">
-    <h4>Why did you create Aspen?</h4>
-    <p>
-      In late 2019, Matt (who studies conflict resolution and <a href="peace.substack.com" target="_blank">writes about peace</a>) tried to quickly model the factors in a conflict in Neo4j, using Cypher. So, Aspen came out of a desire to write freeform text describing a network, and quickly visualize it.
-    </p>
-  </div>
-
-  <div class="hentry post">
-    <h4>Is there a story behind the name?</h4>
-    <p>
-      We wanted the name to reflect the branching and sometimes tree-like nature of graph data, to be short and pronounceable, and to provide good puns for naming future parts of the platform. Plus, as you can tell from Matt's Github username (<a href="https://github.com/beechnut/" target="_blank">@beechnut</a>), he's a bit of a forest geography nerd. Inspired in part by forest geography and in part by <a href="https://store.camposanto.com/products/aspen-poster" target="_blank">the aspen grove</a> in the indie game <a href="http://www.firewatchgame.com/" target="_blank">Firewatch</a>, Aspen seemed like the perfect name.
-    </p>
-    <p>
-      (P.S. The package repository for Aspen will <em>absolutely</em> be called the Aspen Grove.)
-    </p>
-  </div>
-
-</div>
-
-</div><!-- #content -->
+    </div><!-- #content -->
 
    <!--      <div id="sidebar-primary" class="sidebar">
           <div class="widget news">
@@ -407,7 +428,7 @@ Krista gave Hélène $30.75.
         </br>This will be rectified soon. Many thanks to Plataformatec.
       </div>
     </div><!-- .wrap -->
-  </div><!-- #container -->
+  </main>
 </body>
 </html>
 
